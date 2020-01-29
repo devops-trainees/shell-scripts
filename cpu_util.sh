@@ -19,7 +19,7 @@ if [[ "$idle" < 60 ]]; then
 	
 	[ -e memory.txt ] && rm memory.txt
 	
- 	top -l 1 | grep -E "^CPU" | awk -F '[/,]' '{print $3}' | awk -F '[/%]' '{print $1}' | awk '{gsub(/^[ \t]+| [ \t]+$/,""); print $0}' | head>/tmp/memory.txt
+ 	top -l 1 | grep -E "^CPU" | awk -F '[/,]' '{print $3}' | awk -F '[/%]' '{print $1}' | awk '{gsub(/^[ \t]+| [ \t]+$/,""); print "CPU Utilization is "$0"%"}' | head>/tmp/memory.txt
         
 	## send email if CPU utilization is more than 60% 
         
