@@ -1,4 +1,11 @@
 #!/bin/sh
+#######################################################################################
+#Script Name    :user_add.sh
+#Description    :create new user script 
+#Args           :       
+#Author         :Saalim
+#Email          :mahmed@nisum.com
+#######################################################################################
 
 if [[ `id -u` != 0 ]]; then
     echo "Must be root to run script"
